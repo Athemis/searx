@@ -47,10 +47,8 @@ def construct_body(result):
     title = result['title']
 
     # construct content body
-    content = '{title}&nbsp;<span class="glyphicon glyphicon-user"></span>&nbsp;{authors}'
-    content += """&nbsp; \
-    <span class="glyphicon glyphicon-book"></span>&nbsp;{journal}&nbsp;<strong>{volume}</strong>&nbsp;{page} \
-    <span class="glyphicon glyphicon-calendar"></span>&nbsp;{year}"""
+    content = """{title}<br /><span class="glyphicon glyphicon-user"></span>&nbsp;{authors}&nbsp; \
+    <span class="glyphicon glyphicon-book"></span>&nbsp;{journal} <strong>{volume}</strong>&nbsp;{page} ({year})"""
 
     # replace placeholders with actual content
     try:
