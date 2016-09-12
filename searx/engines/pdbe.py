@@ -50,7 +50,7 @@ def construct_body(result):
     content = '{title}&nbsp;<span class="glyphicon glyphicon-user"></span>&nbsp;{authors}'
     content += """&nbsp; \
     <span class="glyphicon glyphicon-book"></span>&nbsp;{journal}&nbsp;<strong>{volume}</strong>&nbsp;{page} \
-    <span class="glyphicon glyphicon-calendar"></span>&nbsp; {year}"""
+    <span class="glyphicon glyphicon-calendar"></span>&nbsp;{year}"""
 
     # replace placeholders with actual content
     try:
