@@ -339,6 +339,17 @@ engines:
     disabled : True
     shortcut : or
 
+  - name : pdbe
+    engine : pdbe
+    shortcut : pdb
+# Hide obsolete PDB entries.
+# Default is not to hide obsolete structures
+#    hide_obsolete : False
+# Hide unpublished PDB entries.
+# Default is to hide those entries. Beware that due to missing or unavailable
+# data, the display of thos entries may be incomplete ore even distorted.
+#    hide_unpublished : True
+
   - name : photon
     engine : photon
     shortcut : ph
