@@ -58,4 +58,4 @@ generally made searx better:
 - marc @a01200356
 - Harry Wood @harry-wood
 - Thomas Renard @threnard
-- Alexander Minges @Athemis
+- Alexander Minges `@Athemis <https://github.com/Athemis>`_
