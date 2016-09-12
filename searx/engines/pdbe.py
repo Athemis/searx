@@ -99,11 +99,13 @@ def response(resp):
                 superseded_url = pdbe_entry_url.format(pdb_id=result['superseded_by'])
 
                 # since we can't construct a proper body from the response, we'll make up our own
-                content = gettext("""<span class="glyphicon glyphicon-exclamation-sign"></span>&nbsp;<em> \
-                                  This entry has been superseded by \
-                                  <a href="{url}">{pdb_id}</a></em>""").format(
+                msg_superseded = gettext("This entry has been superseded by")
+                content = """<span class="glyphicon glyphicon-exclamation-sign"></span>&nbsp;<em>{msg_superseded} \
+                <a href="{url}">{pdb_id}</a></em>""".format(
+                    msg_superseded=msg_superseded,
                     url=superseded_url,
                     pdb_id=result['superseded_by'], )
+
                 # obsoleted entries don't have preview images
                 img_src = None
             else:
