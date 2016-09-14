@@ -47,8 +47,7 @@ def construct_body(result):
     title = result['title']
 
     # construct content body
-    content = """{title}<br /><span class="glyphicon glyphicon-user"></span>&nbsp;{authors}&nbsp; \
-    <span class="glyphicon glyphicon-book"></span>&nbsp;{journal} <strong>{volume}</strong>&nbsp;{page} ({year})"""
+    content = """{title}<br />{authors} {journal} <strong>{volume}</strong>&nbsp;{page} ({year})"""
 
     # replace placeholders with actual content
     try:
@@ -98,8 +97,7 @@ def response(resp):
 
                 # since we can't construct a proper body from the response, we'll make up our own
                 msg_superseded = gettext("This entry has been superseded by")
-                content = """<span class="glyphicon glyphicon-exclamation-sign"></span>&nbsp;<em>{msg_superseded} \
-                <a href="{url}">{pdb_id}</a></em>""".format(
+                content = '<em>{msg_superseded} \<a href="{url}">{pdb_id}</a></em>'.format(
                     msg_superseded=msg_superseded,
                     url=superseded_url,
                     pdb_id=result['superseded_by'], )
